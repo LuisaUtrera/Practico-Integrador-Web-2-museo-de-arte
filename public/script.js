@@ -23,7 +23,7 @@ let cantidadObjetos = 0;
 let paginaActual = 1;
 let maximoImagenes = 20;
 let paginas = []; 
-console.log(objectsId);
+// console.log(objectsId);
 //let misId = objectsId.objectsIDs;
 
 for (const id of objectsId) {
@@ -97,7 +97,7 @@ try {
 //           </div> `;
 
 // cantidadObjetos++;
-console.log(cantidadObjetos);
+
 
 
 
@@ -119,14 +119,14 @@ crearBotones(paginas);
 };
 
 async function cargarImagenesAdicionales(objectID) {
-console.log("Funcion cargar imagenes adicionales");
+
     try {
 
         let resObjeto = await fetch(URL_OBJETO + objectID);
         if (!resObjeto.ok) throw new Error(`Error al obtener el objeto: ${resObjeto.status} - ${resObjeto.statusText}`);
 
         let jsonObjeto = await resObjeto.json();
-        console.log(jsonObjeto);
+        // console.log(jsonObjeto);
     
 
         if (jsonObjeto.additionalImages.length === 0) {
@@ -135,7 +135,7 @@ console.log("Funcion cargar imagenes adicionales");
         function cambiarTamañoImagen(url) { //funcion para cambiar la URL de las imagen para que me traiga las mas chicas y no las orginales
             console.log(url);
             let nuevaUrl = url.replace('/original/', '/web-large/');
-            console.log(nuevaUrl);
+            // console.log(nuevaUrl);
             return nuevaUrl;
         }
 
@@ -241,7 +241,7 @@ document.getElementById("buscar").addEventListener("click", async (event) => {
     const paramLocalizacion = localizacion != '' ? `&geoLocation=${localizacion}` : "";
     const paramDepartamentos = departamento != '' ? `&departmentId=${departamento}` : "";
 
-      console.log(paramDepartamentos, paramLocalizacion);
+    //   console.log(paramDepartamentos, paramLocalizacion);
       console.log(URL_SEARCH + `?q=${keyword}${paramDepartamentos}${paramLocalizacion}`);
 
 
