@@ -235,6 +235,7 @@ async function cargarLocalidades() {
 
 document.getElementById("buscar").addEventListener("click", async (event) => {
     event.preventDefault();
+    $botones.innerHTML = "";
     const departamento = document.getElementById("departamentos").value;
     const keyword = document.getElementById("keyword").value;
     const localizacion = document.getElementById("localidades").value;
