@@ -71,7 +71,7 @@ try {
               <p class="card-text">cultura: ${json.culture.trim() === "" ? "Sin datos" : datosTraducidos[0].cultura}</p>
               <p class="card-text">dinastia: ${json.dynasty.trim() === "" ? "Sin datos" : datosTraducidos[0].dinastia}</p>
               ${json.additionalImages && json.additionalImages.length > 0 ?
-                `<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalImg" onclick="cargarImagenesAdicionales(${json.id})">
+                `<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalImg" onclick="cargarImagenesAdicionales(${id})">
                   Imagenes Adicionales
                 </button>` : ''}
             </div>
