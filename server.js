@@ -1,11 +1,11 @@
 const express = require('express');
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 const translate = require('node-google-translate-skidz');
 const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = 8100;
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -46,11 +46,9 @@ app.post('/traducir', async (req, res) => {
 // app.get('*', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
-
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Servidor iniciado en puerto ${port}`);
 });
-
 
 // app.get('/api/departments', async (req, res) => {
 //     try {
